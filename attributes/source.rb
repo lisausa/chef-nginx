@@ -25,7 +25,7 @@ default['nginx']['source']['prefix']                  = "/opt/nginx-#{node['ngin
 default['nginx']['source']['conf_path']               = "#{node['nginx']['dir']}/nginx.conf"
 default['nginx']['source']['default_configure_flags'] = [
   "--prefix=#{node['nginx']['source']['prefix']}",
-  "--conf-path=#{node['nginx']['dir']}/nginx.conf"
+  "--conf-path=#{node['nginx']['source']['conf_path']}"
 ]
 
 default['nginx']['configure_flags']  = Array.new
